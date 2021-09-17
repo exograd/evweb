@@ -23,7 +23,7 @@ $(subst $(INPUT_DIR),$(OUTPUT_DIR),$1).js: $(wildcard $1/*.js)
 	closure-compiler $(CLOSURE_OPTIONS) \
 	    --js $$^ --js_output_file $$@ \
 	    --create_source_map %outname%.map && \
-	echo "//# sourceMappingURL=$(notdir $$@).map" >>$$@
+	echo "//# sourceMappingURL=$$(notdir $$@).map" >>$$@
 endef
 
 all: build
