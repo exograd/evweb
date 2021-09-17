@@ -20,7 +20,7 @@ $(OUTPUT_DIR)/fonts/%.woff2: $(INPUT_DIR)/fonts/%.woff2
 
 build-css: $(CSS_OUTPUT_FILES)
 
-$(OUTPUT_DIR)/css/%.css: $(INPUT_DIR)/css/%.scss
+$(OUTPUT_DIR)/css/%.css: $(INPUT_DIR)/css/%.scss FORCE
 	sass $(SASS_OPTIONS) $<:$@
 
 prepare_output_dir:
@@ -30,5 +30,7 @@ prepare_output_dir:
 clean:
 	$(RM) -r $(OUTPUT_DIR)/fonts
 	$(RM) -r $(OUTPUT_DIR)/css
+
+FORCE:
 
 .PHONY: all build build-fonts build-css prepare_output_dir clean
