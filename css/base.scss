@@ -3,4 +3,142 @@
 @import "fonts";
 @import "materialdesignicons";
 
+// Colors
+$black:         hsl(228, 10%, 16%);
+$black-bis:     hsl(226, 12%, 22%);
+$black-ter:     hsl(224, 12%, 28%);
+$grey-darker:   hsl(222, 14%, 32%);
+$grey-dark:     hsl(220, 16%, 36%);
+$grey:          hsl(220, 18%, 44%);
+$grey-light:    hsl(220, 18%, 52%);
+$grey-lighter:  hsl(220, 16%, 60%);
+$grey-lightest: hsl(220, 16%, 88%);
+$white-ter:     hsl(218, 14%, 92%);
+$white-bis:     hsl(216, 12%, 94%);
+$white:         hsl(214, 10%, 97%);
+
+$magenta:       hsl(310, 27%, 59%);
+$red:           hsl(358, 42%, 52%);
+$yellow:        hsl( 44, 61%, 50%);
+$green:         hsl( 90, 38%, 35%);
+$cyan:          hsl(200, 50%, 60%);
+$blue:          hsl(215, 40%, 52%);
+
+$blue-p99: adjust-color($blue, $lightness: 20%);
+$blue-p80: adjust-color($blue, $lightness: 10%);
+$blue-p50: $blue;
+
+$primary: $cyan;
+
+$info: $blue;
+
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+
+$link: $blue;
+$link-hover: $blue;
+$link-visited: $magenta;
+
+$dark: $black-ter;
+$light: $white-ter;
+
+$text: $grey-dark;
+$background: $grey-lightest;
+
+$shadow: 0px 1px 0px 0px $grey-lighter;
+
+// Fonts
+$family-sans-serif: "IBM Plex Sans", "sans-serif";
+$family-monospace: "Iosevka Fixed", "monospace";
+$family-primary: $family-sans-serif;
+$family-secondary: "Barlow Semi Condensed", "sans-serif";
+
+$weight-light: 300;
+$weight-normal: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+
+$strong-weight: $weight-medium;
+
+// Sizes
+$size-1: 3rem;
+$size-2: 2.5rem;
+$size-3: 2rem;
+$size-4: 1.5rem;
+$size-5: 1.25rem;
+$size-6: 1rem;
+$size-7: 0.75rem;
+
+$radius-small: 2px;
+$radius: 3px;
+$radius-large: 5px;
+
+// Body
+$body-background-color: $background;
+
+// Text
+$title-size: $size-5;
+$subtitle-size: $size-6;
+
+$title-weight: $weight-medium;
+$subtitle-weight: $weight-medium;
+
+$subtitle-negative-margin: 0;
+
+// Buttons
+$button-color: $dark;
+$button-background-color: $white-bis;
+
+$button-padding-vertical: 0;
+$button-padding-horizontal: 0.8em;
+
+$button-colors: ("primary": ($primary, $white-bis),
+                 "link": ($link, $white-bis),
+                 "info": ($info, $white-bis),
+                 "success": ($success, $white-bis),
+                 "warning": ($warning, $white-bis),
+                 "danger": ($danger, $white-bis));
+
+$button-border-width: 1px;
+$button-border-color: $grey-light;
+
+// Menu
+$menu-item-color: $grey-lightest;
+$menu-item-hover-color: $grey-lightest;
+$menu-item-hover-background-color: $grey-dark;
+$menu-item-active-color: $grey-lightest;
+$menu-item-active-background-color: $primary;
+
+// Tables
+$table-background-color: $background;
+
+// Boxes
+$box-background-color: $white-bis;
+$box-radius: $radius;
+
+// Modals
+$modal-background-background-color: rgba($black-bis, 0.6);
+
+$modal-card-head-radius: $radius;
+$modal-card-head-padding: $size-6;
+$modal-card-head-background-color: $black-bis;
+
+$modal-card-title-size: $title-size;
+$modal-card-title-color: $white-bis;
+
+$modal-card-body-background-color: $background;
+
+$modal-card-foot-radius: $radius-small;
+$modal-card-foot-border-top: 0;
+
+// Forms
+$label-weight: $weight-medium;
+$input-background-color: $white-bis;
+
+$input-border-color: $grey-light;
+$input-hover-border-color: $grey;
+$input-focus-border-color: $grey;
+
 @import "bulma-0.9.3/bulma.sass";
