@@ -31,8 +31,4 @@ clean:
 	$(RM) -r $(OUTPUT_DIR)/fonts
 	$(RM) -r $(OUTPUT_DIR)/css
 
-debug:
-	@echo "INPUT_DIR: $(INPUT_DIR)"
-	@echo "OUTPUT_DIR: $(OUTPUT_DIR)"
-
-.PHONY: all build build-fonts build-css prepare_output_dir clean debug
+.PHONY: all build build-fonts build-css prepare_output_dir clean
