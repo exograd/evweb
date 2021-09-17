@@ -25,6 +25,7 @@ $(OUTPUT_DIR)/css/%.css: $(INPUT_DIR)/css/%.scss
 
 prepare_output_dir:
 	@mkdir -p $(OUTPUT_DIR)/fonts
+	@mkdir -p $(OUTPUT_DIR)/css
 
 clean:
 	$(RM) -r $(OUTPUT_DIR)/*
