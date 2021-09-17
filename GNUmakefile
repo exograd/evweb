@@ -39,10 +39,6 @@ prepare_output_dir:
 clean:
 	$(RM) -r  $(addprefix $(OUTPUT_DIR)/,$(SUB_DIRS))
 
-debug:
-	@echo "IN:  $(IMAGES_INPUT_FILES)"
-	@echo "OUT: $(IMAGES_OUTPUT_FILES)"
-
 FORCE:
 
-.PHONY: all build build-fonts build-css prepare_output_dir clean debug
+.PHONY: all build build-fonts build-css prepare_output_dir clean
