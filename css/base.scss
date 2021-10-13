@@ -105,7 +105,6 @@ $button-border-width: 1px;
 $button-border-color: $grey-light;
 
 // Menu
-$menu-label-color: $primary;
 $menu-label-font-size: $size-6;
 $menu-label-letter-spacing: 0;
 
@@ -179,6 +178,8 @@ $ev-menu-width: 20em; // not defined by Bulma
     padding-right: $size-large;
 
     &.menu-label {
+      color: $primary;
+
       padding-left: $size-large;
       padding-right: $size-large;
     }
