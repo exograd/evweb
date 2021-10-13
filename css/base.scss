@@ -266,3 +266,15 @@ a.button, .menu a, .tabs a {
 a.button:hover {
   color: $button-color;
 }
+
+// Lists
+ul {
+  list-style: inside;
+  list-style-type: "– ";
+}
+
+aside, nav {
+  ul {
+    list-style: none;
+  }
+}
