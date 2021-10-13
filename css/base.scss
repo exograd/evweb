@@ -214,3 +214,20 @@ p {
     margin-bottom: 0.5em;
   }
 }
+
+// Links
+a {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+a.button, .menu a, .tabs a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+a.button:hover {
+  color: $button-color;
+}
