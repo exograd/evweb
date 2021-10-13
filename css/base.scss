@@ -215,6 +215,41 @@ p {
   }
 }
 
+// Preformatted text and code
+code {
+  // Inline code
+  background-color: $background;
+  color: $text;
+
+  padding: 0;
+}
+
+pre {
+  max-width: 100vw;
+
+  border: 1px solid $grey-lightest;
+  border-radius: $radius-small;
+
+  padding: 0.5em 1.0em;
+
+  background-color: $black-bis;
+  color: $grey-lightest;
+
+  &.ev-fixed-height {
+    height: 16em;
+  }
+
+  &.ev-limited-height {
+    max-height: 16em;
+    overflow: auto;
+  }
+
+  & > code {
+    background-color: $black-bis;
+    color: $grey-lightest;
+  }
+}
+
 // Links
 a {
   &:hover {
