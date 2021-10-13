@@ -162,7 +162,7 @@ $ev-menu-width: 20em; // not defined by Bulma
   background-color: $black-bis;
 
   .title {
-    margin-bottom: $size-normal;
+    margin-bottom: $size-large;
 
     padding-left: $size-large;
     padding-right: $size-large;
@@ -170,13 +170,20 @@ $ev-menu-width: 20em; // not defined by Bulma
     color: $primary;
   }
 
+  .menu-list {
+    margin-bottom: $size-normal;
+  }
+
   a {
     padding-left: $size-large;
     padding-right: $size-large;
+  }
 
-    &.menu-label {
-      color: $primary;
-    }
+  .menu-label {
+    padding-left: $size-large;
+    padding-right: $size-large;
+
+    color: $primary;
   }
 
   .ev-top-menu {
