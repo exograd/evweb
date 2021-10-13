@@ -193,3 +193,24 @@ $ev-menu-width: 20em; // not defined by Bulma
   padding-left: 2em;
   padding-right: 2em;
 }
+
+// Text
+p {
+  @include block;
+
+  text-align: justify;
+}
+
+.title, .subtitle, .breadcrumb, .tabs {
+  font-family: $family-secondary;
+}
+
+.title, .subtitle {
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
