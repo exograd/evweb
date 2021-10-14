@@ -288,3 +288,31 @@ aside, nav {
     list-style: none;
   }
 }
+
+// Highlight.js
+.hljs {
+  .hljs-meta {
+    // E.g. '---' for document start marks in YAML.
+    color: $blue;
+  }
+
+  .hljs-bullet {
+    // E.g. '-' in YAML sequence elements.
+  }
+
+  .hljs-keyword {
+    // This includes booleans in YAML and JSON.
+    color: $red;
+  }
+
+  .hljs-attr {
+    // E.g. object keys in JSON.
+    color: $yellow;
+  }
+
+  .hljs-string {
+  }
+
+  .hljs-number {
+  }
+}
