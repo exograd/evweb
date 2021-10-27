@@ -146,13 +146,18 @@ $input-focus-border-color: $grey;
 
 @import "bulma-0.9.3/bulma.sass";
 
-$ev-menu-width: 20em; // not defined by Bulma
+$ev-menu-width: 20em;
+$ev-menu-width-mobile: 14em;
 
 // Menu and main content
 #ev-menu {
   position: fixed;
 
   width: $ev-menu-width;
+  @include mobile {
+    width: $ev-menu-width-mobile;
+  }
+
   height: 100%;
 
   padding: 0;
@@ -191,7 +196,12 @@ $ev-menu-width: 20em; // not defined by Bulma
   .ev-bottom-menu {
     nav {
       position: absolute;
+
       width: $ev-menu-width;
+      @include mobile {
+        width: $ev-menu-width-mobile;
+      }
+
       bottom: $size-5;
     }
   }
@@ -199,6 +209,9 @@ $ev-menu-width: 20em; // not defined by Bulma
 
 #ev-content {
   margin-left: $ev-menu-width;
+  @include mobile {
+    margin-left: $ev-menu-width-mobile;
+  }
 
   padding-left: 2em;
   padding-right: 2em;
