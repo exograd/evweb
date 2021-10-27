@@ -151,11 +151,6 @@ $ev-menu-width: 20em;
 // Menu and main content
 .navbar-burger {
   z-index: 2; // above the menu
-
-  color: $dark;
-
-  margin-left: 0;
-  margin-right: auto;
 }
 
 #ev-menu {
@@ -174,9 +169,6 @@ $ev-menu-width: 20em;
 
   padding: 0;
   padding-top: $size-7;
-  @include mobile {
-    padding-top: $navbar-height; // height of the burger
-  }
 
   background-color: $black-bis;
 
