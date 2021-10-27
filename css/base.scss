@@ -147,21 +147,36 @@ $input-focus-border-color: $grey;
 @import "bulma-0.9.3/bulma.sass";
 
 $ev-menu-width: 20em;
-$ev-menu-width-mobile: 14em;
 
 // Menu and main content
+.navbar-burger {
+  z-index: 2; // above the menu
+
+  color: $dark;
+
+  margin-left: 0;
+  margin-right: auto;
+}
+
 #ev-menu {
   position: fixed;
+  z-index: 1; // above the main content (important on mobile)
+
+  @include mobile {
+    &:not(.is-active) {
+      display: none;
+    }
+  }
 
   width: $ev-menu-width;
-  @include mobile {
-    width: $ev-menu-width-mobile;
-  }
 
   height: 100%;
 
   padding: 0;
   padding-top: $size-7;
+  @include mobile {
+    padding-top: $navbar-height; // height of the burger
+  }
 
   background-color: $black-bis;
 
@@ -196,12 +211,7 @@ $ev-menu-width-mobile: 14em;
   .ev-bottom-menu {
     nav {
       position: absolute;
-
       width: $ev-menu-width;
-      @include mobile {
-        width: $ev-menu-width-mobile;
-      }
-
       bottom: $size-5;
     }
   }
@@ -210,7 +220,7 @@ $ev-menu-width-mobile: 14em;
 #ev-content {
   margin-left: $ev-menu-width;
   @include mobile {
-    margin-left: $ev-menu-width-mobile;
+    margin-left: 0;
   }
 
   padding-left: 2em;
