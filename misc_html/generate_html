@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require("erb")
+
+root_path = File.realpath(File.join(__dir__, ".."))
+
+if ARGV.length < 1
+  $stderr.puts "Usage: #{$0} <path>"
+  exit 1
+end
+
+input_path = ARGV[0]
+template = ERB.new(File.read(input_path))
+
+css_data = File.read(File.join(root_path, "output", "css", "base.css"))
+
+puts template.result(binding)
