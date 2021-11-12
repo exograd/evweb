@@ -144,6 +144,10 @@ $input-border-color: $grey-light;
 $input-hover-border-color: $grey;
 $input-focus-border-color: $grey;
 
+// Dropdowns
+$dropdown-content-background-color: $white-ter;
+$dropdown-item-hover-background-color: $white;
+
 @import "bulma-0.9.3/bulma.sass";
 
 $ev-menu-width: 20em;
@@ -301,6 +305,38 @@ ul {
 aside, nav {
   ul {
     list-style: none;
+  }
+}
+
+// Dropdowns
+.dropdown {
+  .dropdown-trigger .tag {
+    cursor: pointer;
+
+    &:hover {
+      background-color: adjust-color($grey-lightest, $lightness: 5%);
+    }
+  }
+
+  .dropdown-menu {
+    border: 1px solid $grey-lighter;
+    border-radius: $radius-small;
+    box-shadow: $shadow;
+
+    padding: 0;
+
+    .dropdown-item.ev-disabled {
+      color: $grey-lighter;
+
+      &:hover {
+        background-color: $dropdown-content-background-color;
+        cursor: default;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
   }
 }
 
