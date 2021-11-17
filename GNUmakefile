@@ -13,7 +13,7 @@ CSS_INPUT_FILES = $(wildcard $(INPUT_DIR)/css/*.scss)
 CSS_OUTPUT_FILES = $(CSS_INPUT_FILES:$(INPUT_DIR)/%.scss=$(OUTPUT_DIR)/%.css)
 
 IMAGES_INPUT_FILES = $(shell find $(INPUT_DIR)/images -name *.png -or -name *.svg)
-IMAGES_OUTPUT_FILES = $(IMAGES_INPUT_FILES:$(INPUT_DIR)/%.png=$(OUTPUT_DIR)/%.png)
+IMAGES_OUTPUT_FILES = $(IMAGES_INPUT_FILES:$(INPUT_DIR)/%=$(OUTPUT_DIR)/%)
 
 JS_INPUT_BUNDLES = $(shell find $(INPUT_DIR)/js -mindepth 1 -maxdepth 1 -type d)
 JS_OUTPUT_FILES = $(JS_INPUT_BUNDLES:$(INPUT_DIR)/%=$(OUTPUT_DIR)/%.js)
@@ -46,7 +46,7 @@ $(OUTPUT_DIR)/images/%.png: $(INPUT_DIR)/images/%.png
 	pngcrush $< $@
 
 $(OUTPUT_DIR)/images/%.svg: $(INPUT_DIR)/images/%.svg
-	cp $< $@
+	cp -L $< $@
 
 build-js: $(JS_OUTPUT_FILES)
 
