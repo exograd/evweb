@@ -198,12 +198,22 @@ $ev-menu-width: 20em;
   background-color: $black-bis;
 
   .title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
     margin-bottom: $size-large;
 
-    padding-left: $size-large;
+    padding-left: 12px;
     padding-right: $size-large;
 
     color: $primary;
+
+    svg.ev-logo {
+      stroke: $primary;
+      stroke-width: 2px;
+      fill: $primary;
+    }
   }
 
   .menu-list {
