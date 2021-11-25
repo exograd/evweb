@@ -9,8 +9,8 @@ generate() {
 
     name=$1
 
-    input_path=$root/misc_html/$name.html.erb
-    output_path=$root/misc_html/$name.html
+    input_path=$root/misc_html/$name.http.erb
+    output_path=$root/misc_html/$name.http
 
     echo "generating $output_path"
     $root/misc_html/generate_html $input_path > $output_path
