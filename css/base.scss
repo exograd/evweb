@@ -248,6 +248,10 @@ a.button:hover {
   color: $button-color;
 }
 
+a code {
+  color: $link;
+}
+
 // Lists
 ul {
   list-style: inside;
