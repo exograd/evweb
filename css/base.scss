@@ -328,9 +328,8 @@ aside, nav {
       margin-bottom: 0.25em;
     }
 
-    &:not(last-child) {
-      margin-right: $size-small;
-    }
+    margin-left: 0.25em;
+    margin-right: 0.25em;
   }
 }
 
