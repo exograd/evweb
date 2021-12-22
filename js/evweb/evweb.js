@@ -1,6 +1,7 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Burgers
   const burgers = document.querySelectorAll(".navbar-burger");
 
   burgers.forEach(burger => {
@@ -12,4 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
       target.classList.toggle("is-active");
     });
   });
+
+  // Multi-selects
+  const multiSelects = document.querySelectorAll("select[multiple]");
+  multiSelects.forEach(evSetupMultiSelect);
 });

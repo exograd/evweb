@@ -194,6 +194,11 @@ p {
   }
 }
 
+.ev-placeholder {
+  color: $grey;
+  font-style: italic;
+}
+
 // Preformatted text and code
 code {
   // Inline code
@@ -294,6 +299,48 @@ aside, nav {
       text-decoration: none;
     }
   }
+}
+
+// Selects and multi-selects
+.ev-multi-select-view {
+  @include input;
+
+  cursor: pointer;
+
+  max-width: 100%;
+  height: auto;
+
+  &.tags { // make the rule specific to override Bulma rules (CSS sucks)
+    margin-bottom: 0;
+
+    &.ev-expanded {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  & > .tags {
+    margin-bottom: 0;
+    margin-top: 0;
+
+    .tag {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    &:not(last-child) {
+      margin-right: $size-small;
+    }
+  }
+}
+
+select[multiple] {
+  width: 100%;
+
+  border-top: 0;
+
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 // Highlight.js
