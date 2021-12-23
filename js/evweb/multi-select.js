@@ -1,6 +1,16 @@
 "use strict";
 
+function evSetupMultiSelects() {
+  const multiSelects = document.querySelectorAll("select[multiple]");
+  multiSelects.forEach(evSetupMultiSelect);
+}
+
 function evSetupMultiSelect(select) {
+  const parent = select.closest("div.select");
+
+  if (parent.querySelector(".ev-multi-select-view")) {
+    return;
+  }
 
   // Create the view
   const view = document.createElement("div");
@@ -30,7 +40,6 @@ function evSetupMultiSelect(select) {
   updateOptions();
 
   // Insert the view
-  const parent = select.closest("div.select");
   parent.insertBefore(view, select);
 
   evCollapseMultiSelect(select, view);

@@ -15,6 +15,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Multi-selects
-  const multiSelects = document.querySelectorAll("select[multiple]");
-  multiSelects.forEach(evSetupMultiSelect);
+  evSetupMultiSelects();
 });
