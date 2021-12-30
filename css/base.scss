@@ -79,8 +79,9 @@ $radius-large: 5px;
 $body-background-color: $background;
 
 // Footer
-$footer-background-color: $black-bis;
-$footer-color: $grey-lightest;
+$footer-background-color: $background;
+$footer-color: $grey-light;
+$footer-padding: 3rem 1.5rem 4rem;
 
 // Text
 $title-size: $size-5;
@@ -168,6 +169,10 @@ $input-focus-border-color: $grey;
 // Dropdowns
 $dropdown-content-background-color: $white-ter;
 $dropdown-item-hover-background-color: $white;
+
+// Horizontal bars
+$hr-background-color: $grey-lighter;
+$hr-height: 1px;
 
 @import "bulma-0.9.3/bulma.sass";
 
