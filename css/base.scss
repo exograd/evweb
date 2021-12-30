@@ -173,6 +173,25 @@ $dropdown-item-hover-background-color: $white;
 
 $ev-menu-width: 20em;
 
+// Layout
+#ev-content {
+  padding-bottom: $size-3;
+}
+
+#ev-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 100vh;
+
+  .footer {
+    .ev-links a:not(:first-child) {
+      margin-left: $size-small;
+    }
+  }
+}
+
 // Text
 p {
   @include block;
