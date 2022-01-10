@@ -184,12 +184,6 @@ $ev-menu-width: 20em;
 }
 
 #ev-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  min-height: 100vh;
-
   .footer {
     .ev-links a:not(:first-child) {
       margin-left: $size-small;
