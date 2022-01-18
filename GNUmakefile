@@ -43,6 +43,7 @@ $(OUTPUT_DIR)/css/%.css: $(INPUT_DIR)/css/%.scss FORCE
 build-images: $(IMAGES_OUTPUT_FILES)
 
 $(OUTPUT_DIR)/images/%.png: $(INPUT_DIR)/images/%.png
+	mkdir -p $(dir $@)
 	pngcrush -q $< $@
 
 $(OUTPUT_DIR)/images/%.svg: $(INPUT_DIR)/images/%.svg
