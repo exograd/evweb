@@ -3,26 +3,25 @@
 @import "fonts";
 @import "materialdesignicons";
 
-// Colors
-$black:         hsl(228, 10%, 16%);
-$black-bis:     hsl(226, 12%, 22%);
-$black-ter:     hsl(224, 12%, 28%);
-$grey-darker:   hsl(222, 14%, 32%);
-$grey-dark:     hsl(220, 16%, 36%);
-$grey:          hsl(220, 18%, 44%);
-$grey-light:    hsl(220, 18%, 52%);
-$grey-lighter:  hsl(220, 16%, 60%);
-$grey-lightest: hsl(220, 16%, 88%);
-$white-ter:     hsl(218, 14%, 92%);
-$white-bis:     hsl(216, 12%, 94%);
-$white:         hsl(214, 10%, 97%);
+$black         : hsl(  0,  0%, 13%); // #212121
+$black-bis     : hsl(218, 11%, 14%); // #202328
+$black-ter     : hsl(213, 12%, 18%); // #282d33
+$grey-darker   : hsl(213,  9%, 24%); // #383d43
+$grey-dark     : hsl(206, 10%, 30%); // #454e54
+$grey          : hsl(204, 11%, 36%); // #525e66
+$grey-light    : hsl(205,  9%, 50%); // #74818b
+$grey-lighter  : hsl(204,  8%, 68%); // #a7afb4
+$grey-lightest : hsl(202,  7%, 78%); // #c3c8cb
+$white-ter     : hsl(200,  6%, 90%); // #e4e6e7
+$white-bis     : hsl(180,  4%, 94%); // #eff0f0
+$white         : hsl(160,  2%, 96%); // #f5f5f5
+$magenta       : hsl(270, 55%, 60%); // #9961d1
+$red           : hsl(350, 50%, 50%); // #bf4055
+$yellow        : hsl( 48, 85%, 50%); // #ecc113
+$green         : hsl(160, 64%, 44%); // #28b888
+$cyan          : hsl(200, 66%, 60%); // #56afdc
+$blue          : hsl(222, 60%, 55%); // #4771d1
 
-$magenta:       hsl(310, 27%, 59%);
-$red:           hsl(358, 42%, 52%);
-$yellow:        hsl( 33, 61%, 50%);
-$green:         hsl( 90, 38%, 35%);
-$cyan:          hsl(200, 50%, 60%);
-$blue:          hsl(215, 40%, 52%);
 
 $blue-p99: adjust-color($blue, $lightness: 20%);
 $blue-p80: adjust-color($blue, $lightness: 10%);
@@ -40,11 +39,11 @@ $link: $blue;
 $link-hover: $blue;
 $link-visited: $magenta;
 
-$dark: $black-ter;
 $light: $white-ter;
+$dark: $grey-darker;
 
 $text: $grey-dark;
-$background: $grey-lightest;
+$background: $white-ter;
 
 $shadow: 0px 1px 0px 0px $grey-lighter;
 
@@ -115,12 +114,12 @@ $menu-label-letter-spacing: 0;
 
 $menu-item-color: $grey-lightest;
 $menu-item-hover-color: $grey-lightest;
-$menu-item-hover-background-color: $grey-dark;
-$menu-item-active-color: $grey-lightest;
+$menu-item-hover-background-color: $grey-darker;
+$menu-item-active-color: $white-ter;
 $menu-item-active-background-color: $primary;
 
 // Navbar
-$navbar-background-color: $black-bis;
+$navbar-background-color: $black-ter;
 
 $navbar-item-color: $grey-lightest;
 $navbar-item-hover-color: $grey-lightest;
@@ -128,7 +127,7 @@ $navbar-item-hover-background-color: $grey-dark;
 $navbar-item-active-color: $grey-lightest;
 $navbar-item-active-background-color: $primary;
 
-$navbar-dropdown-background-color: $black-bis;
+$navbar-dropdown-background-color: $black-ter;
 $navbar-dropdown-border-top: 0;
 $navbar-dropdown-radius: $radius;
 $navbar-dropdown-item-hover-color: $grey-lightest;
@@ -144,11 +143,11 @@ $box-background-color: $white-bis;
 $box-radius: $radius;
 
 // Modals
-$modal-background-background-color: rgba($black-bis, 0.6);
+$modal-background-background-color: rgba($black-ter, 0.6);
 
 $modal-card-head-radius: $radius;
 $modal-card-head-padding: $size-6;
-$modal-card-head-background-color: $black-bis;
+$modal-card-head-background-color: $black-ter;
 
 $modal-card-title-size: $title-size;
 $modal-card-title-color: $white-bis;
@@ -242,7 +241,7 @@ pre {
 
   padding: 0.5em 1.0em;
 
-  background-color: $black-bis;
+  background-color: $black-ter;
   color: $grey-lightest;
 
   &.ev-fixed-height {
@@ -255,7 +254,7 @@ pre {
   }
 
   & > code {
-    background-color: $black-bis;
+    background-color: $black-ter;
     color: $grey-lightest;
   }
 
