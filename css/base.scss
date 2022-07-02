@@ -244,6 +244,8 @@ pre {
   background-color: $black-ter;
   color: $grey-lightest;
 
+  font-family: $family-monospace;
+
   &.ev-fixed-height {
     height: 16em;
   }
