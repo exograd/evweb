@@ -37,11 +37,3 @@
   src: url(../fonts/barlow-semi-condensed-medium.woff2) format("woff2");
   font-display: swap;
 }
-
-@font-face {
-  font-family: "Iosevka Fixed";
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/iosevka-fixed-regular.woff2) format("woff2");
-  font-display: swap;
-}
