@@ -44,7 +44,7 @@ build-images: $(IMAGES_OUTPUT_FILES)
 
 $(OUTPUT_DIR)/images/%.png: $(INPUT_DIR)/images/%.png
 	mkdir -p $(dir $@)
-	pngcrush -q $< $@
+	cp -L $< $@
 
 $(OUTPUT_DIR)/images/%.svg: $(INPUT_DIR)/images/%.svg
 	cp -L $< $@
