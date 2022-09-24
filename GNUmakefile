@@ -16,7 +16,10 @@ IMAGES_INPUT_FILES = $(shell find $(INPUT_DIR)/images -name *.png -or -name *.sv
 IMAGES_OUTPUT_FILES = $(IMAGES_INPUT_FILES:$(INPUT_DIR)/%=$(OUTPUT_DIR)/%)
 
 JS_INPUT_BUNDLES = $(shell find $(INPUT_DIR)/js -mindepth 1 -maxdepth 1 -type d)
-JS_OUTPUT_FILES = $(JS_INPUT_BUNDLES:$(INPUT_DIR)/%=$(OUTPUT_DIR)/%.js)
+JS_INPUT_FILES = $(wildcard $(INPUT_DIR)/js/*.js)
+JS_OUTPUT_FILES =						\
+	$(JS_INPUT_BUNDLES:$(INPUT_DIR)/%=$(OUTPUT_DIR)/%.js)	\
+	$(JS_INPUT_FILES:$(INPUT_DIR)/%.js=$(OUTPUT_DIR)/%.js)
 
 define js_bundle_rule
 $(subst $(INPUT_DIR),$(OUTPUT_DIR),$1).js: $(wildcard $1/*.js)
@@ -52,6 +55,9 @@ $(OUTPUT_DIR)/images/%.svg: $(INPUT_DIR)/images/%.svg
 build-js: $(JS_OUTPUT_FILES)
 
 $(foreach bundle,$(JS_INPUT_BUNDLES),$(eval $(call js_bundle_rule,$(bundle))))
+
+$(OUTPUT_DIR)/js/%.js: $(INPUT_DIR)/js/%.js
+	cp -L $< $@
 
 prepare_output_dir:
 	@mkdir -p $(addprefix $(OUTPUT_DIR)/,$(SUB_DIRS))
