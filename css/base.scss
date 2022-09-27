@@ -402,4 +402,14 @@ select[multiple] {
 
   .hljs-number {
   }
+
+  .hljs-built_in {
+    color: $yellow;
+  }
+
+  &.language-javascript {
+    .hljs-string {
+      color: $red;
+    }
+  }
 }
