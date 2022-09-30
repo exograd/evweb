@@ -320,6 +320,13 @@ aside, nav {
 
     padding: 0;
 
+    a.dropdown-item, button.dropdown-item {
+      // Bulma uses "inherit" for text-align. This is incorrect because the
+      // dropdown menu could for example be in a table cell whose content is
+      // right aligned. We always want dropdown items to be left aligned.
+      text-align: left;
+    }
+
     .dropdown-item.ev-disabled {
       color: $grey-lighter;
 
