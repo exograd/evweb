@@ -1,7 +1,8 @@
 INPUT_DIR = .
 OUTPUT_DIR = output
 
-SASS_OPTIONS = --no-error-css --style compressed
+SASS_OPTIONS = --no-error-css --style compressed \
+               --silence-deprecation mixed-decls
 CLOSURE_OPTIONS = --jscomp_off "*"
 
 SUB_DIRS = fonts css images js
